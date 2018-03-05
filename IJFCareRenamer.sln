@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IJFCareRenamer", "IJFCareRenamer\IJFCareRenamer.csproj", "{AFE88EF6-F54B-4289-8118-1C0C35FB2089}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "IJFCareRenamerSetup", "IJFCareRenamerSetup\IJFCareRenamerSetup.vdproj", "{BC32C725-4E3E-41ED-AD48-924FADEF48E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFE88EF6-F54B-4289-8118-1C0C35FB2089}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFE88EF6-F54B-4289-8118-1C0C35FB2089}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFE88EF6-F54B-4289-8118-1C0C35FB2089}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFE88EF6-F54B-4289-8118-1C0C35FB2089}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC32C725-4E3E-41ED-AD48-924FADEF48E3}.Debug|Any CPU.ActiveCfg = Debug
+		{BC32C725-4E3E-41ED-AD48-924FADEF48E3}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
