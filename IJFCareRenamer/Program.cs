@@ -18,6 +18,7 @@ namespace IJFCareRenamer
 
         public static void Rename(string IJFFolder, string OuputFolder, bool move)
         {
+            //Check if the folder exists
             if (Directory.Exists(IJFFolder))
             {
                 DirectoryInfo IJFMetaDir = new DirectoryInfo(IJFFolder + "/metadata");
