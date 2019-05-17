@@ -30,7 +30,7 @@ namespace IJFCareRenamer
                         string json = r.ReadToEnd();
                         dynamic array = JsonConvert.DeserializeObject(json);
                         DateTime MatchDateTime = DateTimeFromUnixTimestampMillis(long.Parse(array.data.timestamp_float.ToString()));
-                        string newFilename = MatchDateTime.ToShortDateString() + " " + array.data.Category + " " + array.data.ContestID + " " + array.data.NameWhiteLong + " " + array.data.NameBlueLong + ".flv";
+                        string newFilename = MatchDateTime.ToString("yyyy-MM-dd") + " " + array.data.Category + " " + array.data.ContestID + " " + array.data.NameWhiteLong + " " + array.data.NameBlueLong + ".flv";
                         newFilename = newFilename.Replace(" ", "_");
                         if (!File.Exists(IJFFolder + "/" + array.filename))
                         {
@@ -39,15 +39,18 @@ namespace IJFCareRenamer
                         else
                         {
                             string targetLocation = OuputFolder + "/" + newFilename;
-                            if(move)
+                            if (System.IO.Directory.Exists(OuputFolder))
                             {
-                                File.Move(IJFFolder + "/" + array.filename, targetLocation);
+                                if (move)
+                                {
+                                    File.Move(IJFFolder + "/" + array.filename, targetLocation);
+                                }
+                                else
+                                {
+                                    File.Copy(IJFFolder + "/" + array.filename, targetLocation, true);
+                                }
+                                Console.WriteLine("{0} -> {1}", array.filename, newFilename);
                             }
-                            else
-                            {
-                                File.Copy(IJFFolder + "/" + array.filename, targetLocation, true);
-                            }
-                            Console.WriteLine("{0} -> {1}", array.filename, newFilename);
                         }
                     }
                 }
